@@ -25,33 +25,84 @@ public class VisionOculusScript : MonoBehaviour
         RaycastHit hit = new RaycastHit();
         if (Physics.Raycast(Camara.transform.position, Camara.transform.forward, out hit))
         {
-            Debug.Log("Hit");
+            //Debug.Log("Hit");
             Barra.transform.position = hit.point;
             Debug.Log(hit.transform.gameObject.tag.ToString());
             if (hit.transform.gameObject.tag == "btnOpciones")
             {
                 Debug.Log("btnOpciones");
-                if(lbScript.Estado == Estado_Seleccion.NoSeleccionado)
+                if (lbScript.Estado == Estado_Seleccion.NoSeleccionado)
                 {
                     lbScript.time = 0;
                     lbScript.Estado = Estado_Seleccion.Seleccionando;
                 }
                 if (lbScript.Estado == Estado_Seleccion.Seleccionado)
                 {
-                    Debug.Log("completooooo");
+                    //Debug.Log("completooooo");
+                    adminScript.btn = 2;
+                    lbScript.Estado = Estado_Seleccion.NoSeleccionado;
+                }
+            }
+
+            if (hit.transform.gameObject.tag == "btnNuevo")
+            {
+                Debug.Log("btnNuevo");
+                if (lbScript.Estado == Estado_Seleccion.NoSeleccionado)
+                {
+                    lbScript.time = 0;
+                    lbScript.Estado = Estado_Seleccion.Seleccionando;
+                }
+                if (lbScript.Estado == Estado_Seleccion.Seleccionado)
+                {
+                    //Debug.Log("completooooo");
+                    adminScript.btn = 1;
+                    lbScript.Estado = Estado_Seleccion.NoSeleccionado;
+                }
+            }
+
+            if (hit.transform.gameObject.tag == "btnSalir")
+            {
+                Debug.Log("btnSalir");
+                if (lbScript.Estado == Estado_Seleccion.NoSeleccionado)
+                {
+                    lbScript.time = 0;
+                    lbScript.Estado = Estado_Seleccion.Seleccionando;
+                }
+                if (lbScript.Estado == Estado_Seleccion.Seleccionado)
+                {
+                    //Debug.Log("completooooo");
+                    adminScript.btn = 4;
+                    lbScript.Estado = Estado_Seleccion.NoSeleccionado;
+                }
+            }
+
+            if (hit.transform.gameObject.tag == "btnInstrucciones")
+            {
+                Debug.Log("btnInstrucciones");
+                if (lbScript.Estado == Estado_Seleccion.NoSeleccionado)
+                {
+                    lbScript.time = 0;
+                    lbScript.Estado = Estado_Seleccion.Seleccionando;
+                }
+                if (lbScript.Estado == Estado_Seleccion.Seleccionado)
+                {
+                    //Debug.Log("completooooo");
                     adminScript.btn = 3;
                     lbScript.Estado = Estado_Seleccion.NoSeleccionado;
                 }
             }
+
             else
             {
-                Debug.Log("No button");
+                //Debug.Log("No button");
                 lbScript.Estado = Estado_Seleccion.NoSeleccionado;
                 adminScript.btn = -1;
             }
         }
         else
-            Debug.Log("No hit");
+        {
+            //  Debug.Log("No hit");
+        }
     }
    
 }

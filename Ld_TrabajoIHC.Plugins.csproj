@@ -134,17 +134,7 @@
     <Compile Include="Assets\Standard Assets\Utility\WaypointProgressTracker.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\OVRHarness\LICENSE.txt" />
-    <None Include="Assets\OVRHarness\Resources\help.txt" />
-    <None Include="Assets\OVRHarness\Resources\intro.txt" />
-    <None Include="Assets\OVRInspector\LICENSE.txt" />
-    <None Include="Assets\OVRInspector\Resources\OVRSettings.txt" />
-    <None Include="Assets\OVRInspector\Resources\Quit.txt" />
-    <None Include="Assets\OVRInspector\Resources\UISettings.txt" />
-    <None Include="Assets\OVRInspector\Shaders\Particle Alpha Blend-AfterTrans-TransAlphaCutoff.shader" />
-    <None Include="Assets\OVRInspector\Shaders\Particle-Alpha-Premultiply-AfterTrans.shader" />
-    <None Include="Assets\OVRInspector\Shaders\UI-OptionalZTest.shader" />
-    <None Include="Assets\OVRInspector\Shaders\UI-OptionalZTestFont.shader" />
+    <None Include="Assets\Mega Fantasy Props Pack\README.txt" />
     <None Include="Assets\Oculus\VR\Editor\AndroidManifest.OVRSubmission.xml" />
     <None Include="Assets\Oculus\VR\Plugins\placeholder.txt" />
     <None Include="Assets\Oculus\VR\Resources\Cubemap Blit.shader" />
@@ -169,6 +159,7 @@
     <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Advanced.shader" />
     <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Simple.shader" />
     <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\WaterInclude.cginc" />
+    <None Include="Assets\TutorialAssets\Credits.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

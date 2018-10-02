@@ -133,45 +133,19 @@
     <Compile Include="Assets\Oculus\VR\Scripts\Util\OVRScreenFade.cs" />
     <Compile Include="Assets\Oculus\VR\Scripts\Util\OVRTrackedRemote.cs" />
     <Compile Include="Assets\Oculus\VR\Scripts\Util\OVRWaitCursor.cs" />
-    <Compile Include="Assets\OVRHarness\Scripts\OVRHarness.cs" />
-    <Compile Include="Assets\OVRHarness\Scripts\OVRSceneLoader.cs" />
-    <Compile Include="Assets\OVRInspector\Scripts\IOVRInspectorContext.cs" />
-    <Compile Include="Assets\OVRInspector\Scripts\OVRDiscomfortWarning.cs" />
-    <Compile Include="Assets\OVRInspector\Scripts\OVRDiscomfortWarningSource.cs" />
-    <Compile Include="Assets\OVRInspector\Scripts\OVRInspector.cs" />
-    <Compile Include="Assets\OVRInspector\Scripts\OVRInspectorContext.cs" />
-    <Compile Include="Assets\OVRInspector\Scripts\OVRInspectorLoader.cs" />
-    <Compile Include="Assets\OVRInspector\Scripts\OVRInspectorPanelBuilder.cs" />
-    <Compile Include="Assets\OVRInspector\Scripts\OVRMousePointer.cs" />
-    <Compile Include="Assets\OVRInspector\Scripts\OVRRenderTrackerFrustum.cs" />
-    <Compile Include="Assets\OVRInspector\Scripts\OVRSettingsMenu.cs" />
-    <Compile Include="Assets\OVRInspector\Scripts\OVRSliderLabelUpdater.cs" />
-    <Compile Include="Assets\OVRInspector\Scripts\OVRUISettingsMenu.cs" />
-    <Compile Include="Assets\OVRInspector\Scripts\OVRUserPanel.cs" />
-    <Compile Include="Assets\OVRInspector\Scripts\OVRWarningList.cs" />
-    <Compile Include="Assets\OVRInspector\Scripts\UIUtils\OVRGazeEventTrigger.cs" />
-    <Compile Include="Assets\OVRInspector\Scripts\UIUtils\OVRGazeScroller.cs" />
     <Compile Include="Assets\Scripts\AdminScript.cs" />
-    <Compile Include="Assets\Scripts\Controller.cs" />
+    <Compile Include="Assets\Scripts\FPS_Script.cs" />
     <Compile Include="Assets\Scripts\ImageScript.cs" />
     <Compile Include="Assets\Scripts\LoadingBarScript.cs" />
+    <Compile Include="Assets\Scripts\MostrarTerrenoScript.cs" />
     <Compile Include="Assets\Scripts\MRWindowController.cs" />
     <Compile Include="Assets\Scripts\PointerSelectionController.cs" />
     <Compile Include="Assets\Scripts\VisionOculusScript.cs" />
     <Compile Include="Assets\Scripts\VisionRaycast.cs" />
+    <Compile Include="Assets\TutorialAssets\Scripts\FreeflightCamera.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\OVRHarness\LICENSE.txt" />
-    <None Include="Assets\OVRHarness\Resources\help.txt" />
-    <None Include="Assets\OVRHarness\Resources\intro.txt" />
-    <None Include="Assets\OVRInspector\LICENSE.txt" />
-    <None Include="Assets\OVRInspector\Resources\OVRSettings.txt" />
-    <None Include="Assets\OVRInspector\Resources\Quit.txt" />
-    <None Include="Assets\OVRInspector\Resources\UISettings.txt" />
-    <None Include="Assets\OVRInspector\Shaders\Particle Alpha Blend-AfterTrans-TransAlphaCutoff.shader" />
-    <None Include="Assets\OVRInspector\Shaders\Particle-Alpha-Premultiply-AfterTrans.shader" />
-    <None Include="Assets\OVRInspector\Shaders\UI-OptionalZTest.shader" />
-    <None Include="Assets\OVRInspector\Shaders\UI-OptionalZTestFont.shader" />
+    <None Include="Assets\Mega Fantasy Props Pack\README.txt" />
     <None Include="Assets\Oculus\VR\Editor\AndroidManifest.OVRSubmission.xml" />
     <None Include="Assets\Oculus\VR\Plugins\placeholder.txt" />
     <None Include="Assets\Oculus\VR\Resources\Cubemap Blit.shader" />
@@ -196,6 +170,7 @@
     <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Advanced.shader" />
     <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Simple.shader" />
     <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\WaterInclude.cginc" />
+    <None Include="Assets\TutorialAssets\Credits.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

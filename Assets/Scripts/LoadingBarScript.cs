@@ -34,14 +34,11 @@ public class LoadingBarScript : MonoBehaviour
                 //Debug.Log("++++++++++++" + time.ToString());
             }
             if (time >= time_max)
-            {
-                Debug.Log("completo");
                 Estado = Estado_Seleccion.Seleccionado;
-            }
         }
         if(Estado == Estado_Seleccion.NoSeleccionado)
         {
-            time = 0f;
+            time = 0;
             sldProgreso.value = time;
         }
     }
