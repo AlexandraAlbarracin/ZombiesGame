@@ -136,15 +136,18 @@
     <Compile Include="Assets\Scripts\AdminScript.cs" />
     <Compile Include="Assets\Scripts\FPS_Script.cs" />
     <Compile Include="Assets\Scripts\ImageScript.cs" />
+    <Compile Include="Assets\Scripts\JuegoScript.cs" />
     <Compile Include="Assets\Scripts\LoadingBarScript.cs" />
     <Compile Include="Assets\Scripts\MostrarTerrenoScript.cs" />
     <Compile Include="Assets\Scripts\MRWindowController.cs" />
+    <Compile Include="Assets\Scripts\PantallaJuegoScript.cs" />
     <Compile Include="Assets\Scripts\PointerSelectionController.cs" />
     <Compile Include="Assets\Scripts\VisionOculusScript.cs" />
     <Compile Include="Assets\Scripts\VisionRaycast.cs" />
     <Compile Include="Assets\TutorialAssets\Scripts\FreeflightCamera.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\BlackantMasterStudio\The Shed\Shed_Anims.txt" />
     <None Include="Assets\Mega Fantasy Props Pack\README.txt" />
     <None Include="Assets\Oculus\VR\Editor\AndroidManifest.OVRSubmission.xml" />
     <None Include="Assets\Oculus\VR\Plugins\placeholder.txt" />

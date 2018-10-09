@@ -127,6 +127,7 @@
     <Compile Include="Assets\Standard Assets\Editor\CrossPlatformInput\CrossPlatformInputInitialize.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\BlackantMasterStudio\The Shed\Shed_Anims.txt" />
     <None Include="Assets\Mega Fantasy Props Pack\README.txt" />
     <None Include="Assets\Oculus\VR\Editor\AndroidManifest.OVRSubmission.xml" />
     <None Include="Assets\Oculus\VR\Plugins\placeholder.txt" />

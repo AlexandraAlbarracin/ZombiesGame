@@ -17,6 +17,7 @@ public class VisionOculusScript : MonoBehaviour
     {
         lbScript = canvas.GetComponent<LoadingBarScript>();
         adminScript = canvas.GetComponent<AdminScript>();
+        adminScript.barscript = lbScript;
     }
 	
 	// Update is called once per frame
@@ -28,6 +29,23 @@ public class VisionOculusScript : MonoBehaviour
             //Debug.Log("Hit");
             Barra.transform.position = hit.point;
             Debug.Log(hit.transform.gameObject.tag.ToString());
+
+            if (hit.transform.gameObject.tag == "btnNuevo")
+            {
+                Debug.Log("btnNuevo");
+                if (lbScript.Estado == Estado_Seleccion.NoSeleccionado)
+                {
+                    lbScript.time = 0;
+                    lbScript.Estado = Estado_Seleccion.Seleccionando;
+                }
+                if (lbScript.Estado == Estado_Seleccion.Seleccionado)
+                {
+                    //Debug.Log("completooooo");
+                    adminScript.btn = 1;
+                    lbScript.Estado = Estado_Seleccion.NoSeleccionado;
+                }
+            }
+
             if (hit.transform.gameObject.tag == "btnOpciones")
             {
                 Debug.Log("btnOpciones");
@@ -44,9 +62,9 @@ public class VisionOculusScript : MonoBehaviour
                 }
             }
 
-            if (hit.transform.gameObject.tag == "btnNuevo")
+            if (hit.transform.gameObject.tag == "btnInstrucciones")
             {
-                Debug.Log("btnNuevo");
+                Debug.Log("btnInstrucciones");
                 if (lbScript.Estado == Estado_Seleccion.NoSeleccionado)
                 {
                     lbScript.time = 0;
@@ -55,7 +73,7 @@ public class VisionOculusScript : MonoBehaviour
                 if (lbScript.Estado == Estado_Seleccion.Seleccionado)
                 {
                     //Debug.Log("completooooo");
-                    adminScript.btn = 1;
+                    adminScript.btn = 3;
                     lbScript.Estado = Estado_Seleccion.NoSeleccionado;
                 }
             }
@@ -76,9 +94,9 @@ public class VisionOculusScript : MonoBehaviour
                 }
             }
 
-            if (hit.transform.gameObject.tag == "btnInstrucciones")
+            if (hit.transform.gameObject.tag == "btnDificil")
             {
-                Debug.Log("btnInstrucciones");
+                Debug.Log("btnDificil");
                 if (lbScript.Estado == Estado_Seleccion.NoSeleccionado)
                 {
                     lbScript.time = 0;
@@ -87,7 +105,23 @@ public class VisionOculusScript : MonoBehaviour
                 if (lbScript.Estado == Estado_Seleccion.Seleccionado)
                 {
                     //Debug.Log("completooooo");
-                    adminScript.btn = 3;
+                    adminScript.btn = 5;
+                    lbScript.Estado = Estado_Seleccion.NoSeleccionado;
+                }
+            }
+
+            if (hit.transform.gameObject.tag == "btnFacil")
+            {
+                Debug.Log("btnFacil");
+                if (lbScript.Estado == Estado_Seleccion.NoSeleccionado)
+                {
+                    lbScript.time = 0;
+                    lbScript.Estado = Estado_Seleccion.Seleccionando;
+                }
+                if (lbScript.Estado == Estado_Seleccion.Seleccionado)
+                {
+                    //Debug.Log("completooooo");
+                    adminScript.btn = 6;
                     lbScript.Estado = Estado_Seleccion.NoSeleccionado;
                 }
             }
