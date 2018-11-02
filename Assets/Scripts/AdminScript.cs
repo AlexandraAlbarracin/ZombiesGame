@@ -24,83 +24,107 @@ public class AdminScript : MonoBehaviour
     public GameObject btnDificil;
     public GameObject btnHombre;
     public GameObject btnMujer;
+    public GameObject btnJugar;
 
-    public int btn;
+    //public int btn;
     public bool nivel;
     public bool sexo;
 
+  
+    
     public LoadingBarScript barscript;
 
-    private void Awake()
+    private void Start()
     {
+        PlayerPrefs.SetString("Estado", "NoSeleccionado");
         opcionesAnim = Opciones.GetComponent<Animator>();
         menuAnim = Menu.GetComponent<Animator>();
         instruccionesAnim = Instrucciones.GetComponent<Animator>();
         juegoAnim = Juego.GetComponent<Animator>();
+        //btn = -1;
+        nivel = false;
+        sexo = false; 
     }
     // Use this for initialization
-    void Start ()
-    {
-        btn = -1;
-        nivel = false;
-        sexo = false;
-	}
+    //void Start ()
+    //{
+    //    btn = -1;
+    //    nivel = false;
+    //    sexo = false;
+    //}
 	
 	// Update is called once per frame
 	void Update ()
     {
-        Debug.Log(btn.ToString());
-        if (btn == 1)
+        string btn = PlayerPrefs.GetString("btn");
+        Debug.Log("btnnnnnnnnnnnnnnnn" + btn);
+        if (btn == "1")
         {
             Debug.Log("Nuevo");
             btn_Nuevo();
-            btn = -1;
-            barscript.Estado = Estado_Seleccion.NoSeleccionado;
+            Variables.btn = -1; PlayerPrefs.SetString("btn", "-1");
+            Variables.Estado = Estado_Seleccion.NoSeleccionado.ToString();
+            PlayerPrefs.SetString("Estado", "NoSeleccionado");
         }
       
-        if (btn == 2)
+        if (btn == "2")
         {
             Debug.Log("Opciones");
             btn_Opciones();
-            btn = -1;
-            barscript.Estado = Estado_Seleccion.NoSeleccionado;
+            Variables.btn = -1; PlayerPrefs.SetString("btn", "-1");
+            Variables.Estado = Estado_Seleccion.NoSeleccionado.ToString(); PlayerPrefs.SetString("Estado", "NoSeleccionado");
         }
 
-        if (btn == 3)
+        if (btn == "3")
         {
             Debug.Log("Instrucciones");
             btn_Instrucciones();
-            btn = -1;
-            barscript.Estado = Estado_Seleccion.NoSeleccionado;
+            Variables.btn = -1; PlayerPrefs.SetString("btn", "-1");
+            Variables.Estado = Estado_Seleccion.NoSeleccionado.ToString(); PlayerPrefs.SetString("Estado", "NoSeleccionado");
         }
 
-        if (btn == 4)
+        if (btn == "4")
         {
             Debug.Log("SaLir");
             btn_Salir();
-            btn = -1;
-            barscript.Estado = Estado_Seleccion.NoSeleccionado;
+            Variables.btn = -1; PlayerPrefs.SetString("btn", "-1");
+            Variables.Estado = Estado_Seleccion.NoSeleccionado.ToString(); PlayerPrefs.SetString("Estado", "NoSeleccionado");
         }
 
-        if (btn == 5)
+        if (btn == "5")
         {
             Debug.Log("Nivel Dificil");
             btn_cambio_dificil();
-            btn = -1;
-            barscript.Estado = Estado_Seleccion.NoSeleccionado;
+            Variables.btn = -1; PlayerPrefs.SetString("btn", "-1");
+            Variables.Estado = Estado_Seleccion.NoSeleccionado.ToString(); PlayerPrefs.SetString("Estado", "NoSeleccionado");
         }
 
-        if (btn == 6)
+        if (btn == "6")
         {
             Debug.Log("Nivel Facil");
             btn_cambio_facil();
-            btn = -1;
-            barscript.Estado = Estado_Seleccion.NoSeleccionado;
+            Variables.btn = -1; PlayerPrefs.SetString("btn", "-1");
+            Variables.Estado = Estado_Seleccion.NoSeleccionado.ToString(); PlayerPrefs.SetString("Estado", "NoSeleccionado");
+        }
+        if (btn == "7")
+        {
+            Debug.Log("Retornar");
+            btn_Retornar();
+            Variables.btn = -1; PlayerPrefs.SetString("btn", "-1");
+            Variables.Estado = Estado_Seleccion.NoSeleccionado.ToString(); PlayerPrefs.SetString("Estado", "NoSeleccionado");
+        }
+        if (btn == "8")
+        {
+            Debug.Log("Retornar");
+            btn_Juego();
+            Variables.btn = -1; PlayerPrefs.SetString("btn", "-1");
+            Variables.Estado = Estado_Seleccion.NoSeleccionado.ToString(); PlayerPrefs.SetString("Estado", "NoSeleccionado");
         }
     }
 
     public void btn_Nuevo()
     {
+        Debug.Log("Nuevo");
         Juego.SetActive(true);
         menuAnim.SetBool("Mostrar", false);
         menuAnim.SetBool("Ocultar", true);
@@ -108,8 +132,9 @@ public class AdminScript : MonoBehaviour
         juegoAnim.SetBool("Mostrar", true);
     }
 
-    public void Jugar()
+    public void btn_Juego()
     {
+
         SceneManager.LoadScene(1);
     }
 
@@ -124,7 +149,8 @@ public class AdminScript : MonoBehaviour
 
     public void btn_Salir()
     {
-        Application.Quit();
+        //Application.Quit();
+        Debug.Log("Salir");
     }
 
     public void btn_Retornar()

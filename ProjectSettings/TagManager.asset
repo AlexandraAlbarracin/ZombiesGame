@@ -3,7 +3,18 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - btnNuevo
+  - btnSalir
+  - btnFacil
+  - btnOpciones
+  - btnInstrucciones
+  - btnDificil
+  - btnJugar
+  - btnHombre
+  - btnMujer
+  - sldProgreso
+  - btnRetornar
   layers:
   - Default
   - TransparentFX
