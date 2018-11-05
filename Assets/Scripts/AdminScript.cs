@@ -28,10 +28,8 @@ public class AdminScript : MonoBehaviour
 
     //public int btn;
     public bool nivel;
-    public bool sexo;
+    public static bool sexo;
 
-  
-    
     public LoadingBarScript barscript;
 
     private void Start()
@@ -45,15 +43,7 @@ public class AdminScript : MonoBehaviour
         nivel = false;
         sexo = false; 
     }
-    // Use this for initialization
-    //void Start ()
-    //{
-    //    btn = -1;
-    //    nivel = false;
-    //    sexo = false;
-    //}
-	
-	// Update is called once per frame
+
 	void Update ()
     {
         string btn = PlayerPrefs.GetString("btn");
@@ -85,7 +75,7 @@ public class AdminScript : MonoBehaviour
 
         if (btn == "4")
         {
-            Debug.Log("SaLir");
+            Debug.Log("Salir");
             btn_Salir();
             Variables.btn = -1; PlayerPrefs.SetString("btn", "-1");
             Variables.Estado = Estado_Seleccion.NoSeleccionado.ToString(); PlayerPrefs.SetString("Estado", "NoSeleccionado");
@@ -115,8 +105,15 @@ public class AdminScript : MonoBehaviour
         }
         if (btn == "8")
         {
-            Debug.Log("Retornar");
+            Debug.Log("Juego");
             btn_Juego();
+            Variables.btn = -1; PlayerPrefs.SetString("btn", "-1");
+            Variables.Estado = Estado_Seleccion.NoSeleccionado.ToString(); PlayerPrefs.SetString("Estado", "NoSeleccionado");
+        }
+        if (btn == "9")
+        {
+            Debug.Log("Retornar");
+            btn_Retornar1();
             Variables.btn = -1; PlayerPrefs.SetString("btn", "-1");
             Variables.Estado = Estado_Seleccion.NoSeleccionado.ToString(); PlayerPrefs.SetString("Estado", "NoSeleccionado");
         }

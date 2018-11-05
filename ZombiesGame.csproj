@@ -136,12 +136,14 @@
     <Compile Include="Assets\Scripts\AdminScript.cs" />
     <Compile Include="Assets\Scripts\Character.cs" />
     <Compile Include="Assets\Scripts\FPS_Script.cs" />
+    <Compile Include="Assets\Scripts\HealthBar.cs" />
     <Compile Include="Assets\Scripts\ImageScript.cs" />
     <Compile Include="Assets\Scripts\JuegoScript.cs" />
     <Compile Include="Assets\Scripts\LoadingBarScript.cs" />
     <Compile Include="Assets\Scripts\MostrarTerrenoScript.cs" />
     <Compile Include="Assets\Scripts\MRWindowController.cs" />
     <Compile Include="Assets\Scripts\PantallaJuegoScript.cs" />
+    <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\PointerSelectionController.cs" />
     <Compile Include="Assets\Scripts\Variables.cs" />
     <Compile Include="Assets\Scripts\VisionOculusScript.cs" />

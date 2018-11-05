@@ -15,6 +15,7 @@ TagManager:
   - btnMujer
   - sldProgreso
   - btnRetornar
+  - btnRetornar1
   layers:
   - Default
   - TransparentFX

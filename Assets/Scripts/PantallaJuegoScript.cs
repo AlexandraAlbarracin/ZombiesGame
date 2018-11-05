@@ -11,6 +11,7 @@ public class PantallaJuegoScript : MonoBehaviour {
     public Sprite spriteRifle;
     public Sprite spriteEscopeta;
     public GameObject canvassubmenu;
+
     // Use this for initialization
     void Start ()
     {
