@@ -16,10 +16,10 @@ public class HealthBar : MonoBehaviour {
         health = maxHealth;
     }
 
-//    [ContextMenu("Mas")]
-    public void AddHealth(float amount)
+    [ContextMenu("Mas")]
+    public void AddHealth()//float amount)
     {
-        health += amount;
+        health += -10;//amount;
         if(health > maxHealth)
         {
             health = maxHealth;

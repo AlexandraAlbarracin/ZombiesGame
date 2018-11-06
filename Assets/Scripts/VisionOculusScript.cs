@@ -345,8 +345,287 @@ public class VisionOculusScript : MonoBehaviour
                 }
             }
 
+/*Arma1*/
+            if (hit.transform.gameObject.tag == "btnArma1")
+            {
+                Debug.Log("btnArma1");
+                if (hit.transform.gameObject.tag != tag_actual)
+                {
+                    Variables.Estado = Estado_Seleccion.NoSeleccionado.ToString(); PlayerPrefs.SetString("Estado", "NoSeleccionado");
+                    Variables.btn = -1; PlayerPrefs.SetString("btn", "-1");
 
+                    PlayerPrefs.SetString("Estado", "NoSeleccionado");
+                }
 
+                // Debug.Log("btnOpciones");
+                if (est == Estado_Seleccion.NoSeleccionado.ToString())
+                {
+                    lbScript.time = 0;
+                    Variables.Estado = Estado_Seleccion.Seleccionando.ToString(); PlayerPrefs.SetString("Estado", "Seleccionando");
+                    tag_actual = "btnArma1";
+                    Debug.Log("Seleccionando Arma1");
+
+                    PlayerPrefs.SetString("Estado", "Seleccionando");
+                }
+
+                Debug.Log(Variables.btn.ToString());
+
+                if (est == Estado_Seleccion.Seleccionado.ToString())
+                {
+                    PlayerPrefs.SetString("btn", "10");
+                    Variables.btn = 10;
+                    Variables.Estado = Estado_Seleccion.NoSeleccionado.ToString(); PlayerPrefs.SetString("Estado", "NoSeleccionado");
+                    Debug.Log(Variables.btn.ToString());
+
+                    PlayerPrefs.SetString("Estado", "NoSeleccionado");
+                }
+            }
+/*Arma2*/
+            if (hit.transform.gameObject.tag == "btnArma2")
+            {
+                Debug.Log("btnArma2");
+                if (hit.transform.gameObject.tag != tag_actual)
+                {
+                    Variables.Estado = Estado_Seleccion.NoSeleccionado.ToString(); PlayerPrefs.SetString("Estado", "NoSeleccionado");
+                    Variables.btn = -1; PlayerPrefs.SetString("btn", "-1");
+
+                    PlayerPrefs.SetString("Estado", "NoSeleccionado");
+                }
+
+                // Debug.Log("btnOpciones");
+                if (est == Estado_Seleccion.NoSeleccionado.ToString())
+                {
+                    lbScript.time = 0;
+                    Variables.Estado = Estado_Seleccion.Seleccionando.ToString(); PlayerPrefs.SetString("Estado", "Seleccionando");
+                    tag_actual = "btnArma2";
+                    Debug.Log("Seleccionando Arma2");
+
+                    PlayerPrefs.SetString("Estado", "Seleccionando");
+                }
+
+                Debug.Log(Variables.btn.ToString());
+
+                if (est == Estado_Seleccion.Seleccionado.ToString())
+                {
+                    PlayerPrefs.SetString("btn", "11");
+                    Variables.btn = 11;
+                    Variables.Estado = Estado_Seleccion.NoSeleccionado.ToString(); PlayerPrefs.SetString("Estado", "NoSeleccionado");
+                    Debug.Log(Variables.btn.ToString());
+
+                    PlayerPrefs.SetString("Estado", "NoSeleccionado");
+                }
+            }
+/*Arma3*/
+            if (hit.transform.gameObject.tag == "btnArma3")
+            {
+                Debug.Log("btnArma3");
+                if (hit.transform.gameObject.tag != tag_actual)
+                {
+                    Variables.Estado = Estado_Seleccion.NoSeleccionado.ToString(); PlayerPrefs.SetString("Estado", "NoSeleccionado");
+                    Variables.btn = -1; PlayerPrefs.SetString("btn", "-1");
+
+                    PlayerPrefs.SetString("Estado", "NoSeleccionado");
+                }
+
+                // Debug.Log("btnOpciones");
+                if (est == Estado_Seleccion.NoSeleccionado.ToString())
+                {
+                    lbScript.time = 0;
+                    Variables.Estado = Estado_Seleccion.Seleccionando.ToString(); PlayerPrefs.SetString("Estado", "Seleccionando");
+                    tag_actual = "btnArma3";
+                    Debug.Log("Seleccionando Arma3");
+
+                    PlayerPrefs.SetString("Estado", "Seleccionando");
+                }
+
+                Debug.Log(Variables.btn.ToString());
+
+                if (est == Estado_Seleccion.Seleccionado.ToString())
+                {
+                    PlayerPrefs.SetString("btn", "12");
+                    Variables.btn = 12;
+                    Variables.Estado = Estado_Seleccion.NoSeleccionado.ToString(); PlayerPrefs.SetString("Estado", "NoSeleccionado");
+                    Debug.Log(Variables.btn.ToString());
+
+                    PlayerPrefs.SetString("Estado", "NoSeleccionado");
+                }
+            }
+/*Arma4*/
+            if (hit.transform.gameObject.tag == "btnArma4")
+            {
+                Debug.Log("btnArma4");
+                if (hit.transform.gameObject.tag != tag_actual)
+                {
+                    Variables.Estado = Estado_Seleccion.NoSeleccionado.ToString(); PlayerPrefs.SetString("Estado", "NoSeleccionado");
+                    Variables.btn = -1; PlayerPrefs.SetString("btn", "-1");
+
+                    PlayerPrefs.SetString("Estado", "NoSeleccionado");
+                }
+
+                // Debug.Log("btnOpciones");
+                if (est == Estado_Seleccion.NoSeleccionado.ToString())
+                {
+                    lbScript.time = 0;
+                    Variables.Estado = Estado_Seleccion.Seleccionando.ToString(); PlayerPrefs.SetString("Estado", "Seleccionando");
+                    tag_actual = "btnArma4";
+                    Debug.Log("Seleccionando Arma4");
+
+                    PlayerPrefs.SetString("Estado", "Seleccionando");
+                }
+
+                Debug.Log(Variables.btn.ToString());
+
+                if (est == Estado_Seleccion.Seleccionado.ToString())
+                {
+                    PlayerPrefs.SetString("btn", "13");
+                    Variables.btn = 13;
+                    Variables.Estado = Estado_Seleccion.NoSeleccionado.ToString(); PlayerPrefs.SetString("Estado", "NoSeleccionado");
+                    Debug.Log(Variables.btn.ToString());
+
+                    PlayerPrefs.SetString("Estado", "NoSeleccionado");
+                }
+            }
+/*Vida1*/
+            if (hit.transform.gameObject.tag == "btnVida1")
+            {
+                Debug.Log("btnVida1");
+                if (hit.transform.gameObject.tag != tag_actual)
+                {
+                    Variables.Estado = Estado_Seleccion.NoSeleccionado.ToString(); PlayerPrefs.SetString("Estado", "NoSeleccionado");
+                    Variables.btn = -1; PlayerPrefs.SetString("btn", "-1");
+
+                    PlayerPrefs.SetString("Estado", "NoSeleccionado");
+                }
+
+                // Debug.Log("btnOpciones");
+                if (est == Estado_Seleccion.NoSeleccionado.ToString())
+                {
+                    lbScript.time = 0;
+                    Variables.Estado = Estado_Seleccion.Seleccionando.ToString(); PlayerPrefs.SetString("Estado", "Seleccionando");
+                    tag_actual = "btnVida1";
+                    Debug.Log("Seleccionando Vida1");
+
+                    PlayerPrefs.SetString("Estado", "Seleccionando");
+                }
+
+                Debug.Log(Variables.btn.ToString());
+
+                if (est == Estado_Seleccion.Seleccionado.ToString())
+                {
+                    PlayerPrefs.SetString("btn", "14");
+                    Variables.btn = 14;
+                    Variables.Estado = Estado_Seleccion.NoSeleccionado.ToString(); PlayerPrefs.SetString("Estado", "NoSeleccionado");
+                    Debug.Log(Variables.btn.ToString());
+
+                    PlayerPrefs.SetString("Estado", "NoSeleccionado");
+                }
+            }
+/*Vida2*/
+            if (hit.transform.gameObject.tag == "btnVida2")
+            {
+                Debug.Log("btnVida2");
+                if (hit.transform.gameObject.tag != tag_actual)
+                {
+                    Variables.Estado = Estado_Seleccion.NoSeleccionado.ToString(); PlayerPrefs.SetString("Estado", "NoSeleccionado");
+                    Variables.btn = -1; PlayerPrefs.SetString("btn", "-1");
+
+                    PlayerPrefs.SetString("Estado", "NoSeleccionado");
+                }
+
+                // Debug.Log("btnOpciones");
+                if (est == Estado_Seleccion.NoSeleccionado.ToString())
+                {
+                    lbScript.time = 0;
+                    Variables.Estado = Estado_Seleccion.Seleccionando.ToString(); PlayerPrefs.SetString("Estado", "Seleccionando");
+                    tag_actual = "btnVida2";
+                    Debug.Log("Seleccionando Vida2");
+
+                    PlayerPrefs.SetString("Estado", "Seleccionando");
+                }
+
+                Debug.Log(Variables.btn.ToString());
+
+                if (est == Estado_Seleccion.Seleccionado.ToString())
+                {
+                    PlayerPrefs.SetString("btn", "15");
+                    Variables.btn = 15;
+                    Variables.Estado = Estado_Seleccion.NoSeleccionado.ToString(); PlayerPrefs.SetString("Estado", "NoSeleccionado");
+                    Debug.Log(Variables.btn.ToString());
+
+                    PlayerPrefs.SetString("Estado", "NoSeleccionado");
+                }
+            }
+/*Vida3*/
+            if (hit.transform.gameObject.tag == "btnVida3")
+            {
+                Debug.Log("btnVida3");
+                if (hit.transform.gameObject.tag != tag_actual)
+                {
+                    Variables.Estado = Estado_Seleccion.NoSeleccionado.ToString(); PlayerPrefs.SetString("Estado", "NoSeleccionado");
+                    Variables.btn = -1; PlayerPrefs.SetString("btn", "-1");
+
+                    PlayerPrefs.SetString("Estado", "NoSeleccionado");
+                }
+
+                // Debug.Log("btnOpciones");
+                if (est == Estado_Seleccion.NoSeleccionado.ToString())
+                {
+                    lbScript.time = 0;
+                    Variables.Estado = Estado_Seleccion.Seleccionando.ToString(); PlayerPrefs.SetString("Estado", "Seleccionando");
+                    tag_actual = "btnVida3";
+                    Debug.Log("Seleccionando Vida3");
+
+                    PlayerPrefs.SetString("Estado", "Seleccionando");
+                }
+
+                Debug.Log(Variables.btn.ToString());
+
+                if (est == Estado_Seleccion.Seleccionado.ToString())
+                {
+                    PlayerPrefs.SetString("btn", "16");
+                    Variables.btn = 16;
+                    Variables.Estado = Estado_Seleccion.NoSeleccionado.ToString(); PlayerPrefs.SetString("Estado", "NoSeleccionado");
+                    Debug.Log(Variables.btn.ToString());
+
+                    PlayerPrefs.SetString("Estado", "NoSeleccionado");
+                }
+            }
+/*Vida4*/
+            if (hit.transform.gameObject.tag == "btnVida4")
+            {
+                Debug.Log("btnVida4");
+                if (hit.transform.gameObject.tag != tag_actual)
+                {
+                    Variables.Estado = Estado_Seleccion.NoSeleccionado.ToString(); PlayerPrefs.SetString("Estado", "NoSeleccionado");
+                    Variables.btn = -1; PlayerPrefs.SetString("btn", "-1");
+
+                    PlayerPrefs.SetString("Estado", "NoSeleccionado");
+                }
+
+                // Debug.Log("btnOpciones");
+                if (est == Estado_Seleccion.NoSeleccionado.ToString())
+                {
+                    lbScript.time = 0;
+                    Variables.Estado = Estado_Seleccion.Seleccionando.ToString(); PlayerPrefs.SetString("Estado", "Seleccionando");
+                    tag_actual = "btnVida4";
+                    Debug.Log("Seleccionando Vida4");
+
+                    PlayerPrefs.SetString("Estado", "Seleccionando");
+                }
+
+                Debug.Log(Variables.btn.ToString());
+
+                if (est == Estado_Seleccion.Seleccionado.ToString())
+                {
+                    PlayerPrefs.SetString("btn", "17");
+                    Variables.btn = 17;
+                    Variables.Estado = Estado_Seleccion.NoSeleccionado.ToString(); PlayerPrefs.SetString("Estado", "NoSeleccionado");
+                    Debug.Log(Variables.btn.ToString());
+
+                    PlayerPrefs.SetString("Estado", "NoSeleccionado");
+                }
+            }
+            
             else
             {
                 //Debug.Log("No button");

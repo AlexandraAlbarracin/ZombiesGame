@@ -29,8 +29,18 @@ public class AdminScript : MonoBehaviour
     //public int btn;
     public bool nivel;
     public static bool sexo;
+    public static bool Arma1;
+    public static bool Arma2;
+    public static bool Arma3;
+    public static bool Arma4;
+    public static int Vida1;
+    public static int Vida2;
+    public static int Vida3;
+    public static int Vida4;
+
 
     public LoadingBarScript barscript;
+    public HealthBar healthBar;
 
     private void Start()
     {
@@ -41,10 +51,18 @@ public class AdminScript : MonoBehaviour
         juegoAnim = Juego.GetComponent<Animator>();
         //btn = -1;
         nivel = false;
-        sexo = false; 
+        sexo = false;
+        Arma1 = false;
+        Arma2 = false;
+        Arma3 = false;
+        Arma4 = false;
+        Vida1 = 0;
+        Vida2 = 0;
+        Vida3 = 0;
+        Vida4 = 0;
     }
 
-	void Update ()
+    void Update ()
     {
         string btn = PlayerPrefs.GetString("btn");
         Debug.Log("btnnnnnnnnnnnnnnnn" + btn);
@@ -114,6 +132,13 @@ public class AdminScript : MonoBehaviour
         {
             Debug.Log("Retornar");
             btn_Retornar1();
+            Variables.btn = -1; PlayerPrefs.SetString("btn", "-1");
+            Variables.Estado = Estado_Seleccion.NoSeleccionado.ToString(); PlayerPrefs.SetString("Estado", "NoSeleccionado");
+        }
+        if (btn == "10")
+        {
+            Debug.Log("Arma1");
+            btn_Arma1();
             Variables.btn = -1; PlayerPrefs.SetString("btn", "-1");
             Variables.Estado = Estado_Seleccion.NoSeleccionado.ToString(); PlayerPrefs.SetString("Estado", "NoSeleccionado");
         }
@@ -209,5 +234,51 @@ public class AdminScript : MonoBehaviour
         m = btnMujer.GetComponent<Image>();
         m.color = Color.red;
         sexo = false;
+    }
+
+    public void btn_Arma1()
+    {
+        Arma1 = true;
+    }
+
+    public void btn_Arma2()
+    {
+        Arma2 = true;
+    }
+
+    public void btn_Arma3()
+    {
+        Arma3 = true;
+    }
+
+    public void btn_Arma4()
+    {
+        Arma4 = true;
+
+    }
+
+    public void btn_Vida1()
+    {
+        Vida1 += Vida1;
+        //healthBar.AddHealth(5);
+    }
+
+    public void btn_Vida2()
+    {
+        Vida2 += Vida2;
+       // healthBar.AddHealth(10);
+    }
+
+    public void btn_Vida3()
+    {
+        Vida3 += Vida3;
+      //  healthBar.AddHealth(15);
+    }
+
+    public void btn_Vida4()
+    {
+        Vida4 += Vida4;
+       // healthBar.AddHealth(20
+          //  );
     }
 }
