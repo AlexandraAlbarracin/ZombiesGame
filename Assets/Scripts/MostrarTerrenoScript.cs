@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MostrarTerrenoScript : MonoBehaviour
 {
-
+    
     public GameObject fpsController;
     // Use this for initialization
     void Start () {
@@ -13,8 +13,9 @@ public class MostrarTerrenoScript : MonoBehaviour
 	
 	// Update is called once per frame
 	void Update () {
-		
+        
 	}
+	
     public void HabilitarFps()
     {
         fpsController.SetActive(true);

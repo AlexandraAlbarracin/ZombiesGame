@@ -12,12 +12,37 @@ public class PantallaJuegoScript : MonoBehaviour {
     public Sprite spriteEscopeta;
     public GameObject canvassubmenu;
 
+    public Image ArmaAldea;
+    public Image ArmaAlmacen;
+    public Image ArmaEstablo;
+    public Image ArmaMansion;
+    public Image LlaveAldea;
+    public Image LlaveAlmacen;
+    public Image LlaveEstablo;
+    public Image LlaveMansion;
+    public Image VidaAldea;
+    public Image VidaAlmacen;
+    public Image VidaEstablo;
+    public Image VidaMansion;
+
     // Use this for initialization
     void Start ()
     {
-
+        canvassubmenu.SetActive(false);
         //ActualizarArma(4);
-	}
+        ArmaAldea.enabled = false;
+        ArmaAlmacen.enabled = false;
+        ArmaEstablo.enabled = false;
+        ArmaMansion.enabled = false;
+        LlaveAldea.enabled = false;
+        LlaveAlmacen.enabled = false;
+        LlaveEstablo.enabled = false;
+        LlaveMansion.enabled = false;
+        VidaAldea.enabled = false;
+        VidaAlmacen.enabled = false;
+        VidaEstablo.enabled = false;
+        VidaMansion.enabled = false;
+    }
     public bool submenu;
 	// Update is called once per frame
 	void Update ()
@@ -33,6 +58,7 @@ public class PantallaJuegoScript : MonoBehaviour {
             canvassubmenu.SetActive(submenu);
             //Debug.Log("boton x");
         }
+        
     }
     public void ActualizarArma(int n)
     {

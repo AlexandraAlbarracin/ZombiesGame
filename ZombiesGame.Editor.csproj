@@ -116,6 +116,9 @@
     <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
       <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/15.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
+    <Reference Include="System.Data">
+      <HintPath>Assets/Plugins/System.Data.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="ZombiesGame.Plugins.csproj">
@@ -144,6 +147,7 @@
   <ItemGroup>
     <None Include="Assets\BlackantMasterStudio\The Shed\Shed_Anims.txt" />
     <None Include="Assets\Mega Fantasy Props Pack\README.txt" />
+    <None Include="Assets\Mobile_Citizen_Human&amp;Zombie_free\ArtResources\Shader\CharacterShader_mobile.shader" />
     <None Include="Assets\Oculus\VR\Editor\AndroidManifest.OVRSubmission.xml" />
     <None Include="Assets\Oculus\VR\Plugins\placeholder.txt" />
     <None Include="Assets\Oculus\VR\Resources\Cubemap Blit.shader" />

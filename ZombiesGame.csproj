@@ -77,6 +77,9 @@
     <Reference Include="UnityEngine.HoloLens">
       <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
     </Reference>
+    <Reference Include="System.Data">
+      <HintPath>Assets/Plugins/System.Data.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="ZombiesGame.Plugins.csproj">
@@ -133,8 +136,10 @@
     <Compile Include="Assets\Oculus\VR\Scripts\Util\OVRScreenFade.cs" />
     <Compile Include="Assets\Oculus\VR\Scripts\Util\OVRTrackedRemote.cs" />
     <Compile Include="Assets\Oculus\VR\Scripts\Util\OVRWaitCursor.cs" />
+    <Compile Include="Assets\Scripts\AdminJugador2.cs" />
     <Compile Include="Assets\Scripts\AdminScript.cs" />
     <Compile Include="Assets\Scripts\Character.cs" />
+    <Compile Include="Assets\Scripts\ControladorJuego.cs" />
     <Compile Include="Assets\Scripts\FPS_Script.cs" />
     <Compile Include="Assets\Scripts\HealthBar.cs" />
     <Compile Include="Assets\Scripts\ImageScript.cs" />
@@ -144,15 +149,20 @@
     <Compile Include="Assets\Scripts\MRWindowController.cs" />
     <Compile Include="Assets\Scripts\PantallaJuegoScript.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
+    <Compile Include="Assets\Scripts\PlayerFPScript.cs" />
     <Compile Include="Assets\Scripts\PointerSelectionController.cs" />
+    <Compile Include="Assets\Scripts\Position.cs" />
+    <Compile Include="Assets\Scripts\ServidorScript.cs" />
     <Compile Include="Assets\Scripts\Variables.cs" />
     <Compile Include="Assets\Scripts\VisionOculusScript.cs" />
     <Compile Include="Assets\Scripts\VisionRaycast.cs" />
+    <Compile Include="Assets\Scripts\Zombie1Script.cs" />
     <Compile Include="Assets\TutorialAssets\Scripts\FreeflightCamera.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\BlackantMasterStudio\The Shed\Shed_Anims.txt" />
     <None Include="Assets\Mega Fantasy Props Pack\README.txt" />
+    <None Include="Assets\Mobile_Citizen_Human&amp;Zombie_free\ArtResources\Shader\CharacterShader_mobile.shader" />
     <None Include="Assets\Oculus\VR\Editor\AndroidManifest.OVRSubmission.xml" />
     <None Include="Assets\Oculus\VR\Plugins\placeholder.txt" />
     <None Include="Assets\Oculus\VR\Resources\Cubemap Blit.shader" />

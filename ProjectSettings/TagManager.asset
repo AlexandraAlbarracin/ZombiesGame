@@ -16,6 +16,42 @@ TagManager:
   - sldProgreso
   - btnRetornar
   - btnRetornar1
+  - btnAldea
+  - btnAlmacen
+  - btnCasaAldea
+  - btnCasaLago
+  - btnCementerio
+  - btnEstablo
+  - btnLago
+  - btnMansion
+  - btnJuego2
+  - btnZombie1
+  - btnZombie2
+  - btnZombie
+  - btnArma1
+  - btnArma2
+  - btnArma3
+  - btnArma4
+  - btnLlave1
+  - btnLlave2
+  - btnLlave3
+  - btnLlave4
+  - btnVida1
+  - btnVida2
+  - btnVida3
+  - btnVida4
+  - btnUArma1
+  - btnUArma2
+  - btnUArma3
+  - btnUArma4
+  - btnUVida1
+  - btnUVida2
+  - btnUVida3
+  - btnUVida4
+  - btnULlave1
+  - btnULlave2
+  - btnULlave3
+  - btnULlave4
   layers:
   - Default
   - TransparentFX

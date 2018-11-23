@@ -8,7 +8,7 @@ public class LoadingBarScript : MonoBehaviour
     //public GameObject cnv;
 
     //AdminScript adminScript;
-    Slider sldProgreso;
+    public Slider sldProgreso;
     //VisionRaycast VisionScript;
     //public Estado_Seleccion Estado;
     public float time;
@@ -26,24 +26,24 @@ public class LoadingBarScript : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
-        Debug.Log("#----------- " + PlayerPrefs.GetString("Estado"));
+        //Debug.Log("#----------- " + PlayerPrefs.GetString("Estado"));
         string est = PlayerPrefs.GetString("Estado");
         if (est == Estado_Seleccion.Seleccionando.ToString())
         {
-            Debug.Log("time_ ");
+            //Debug.Log("time_ ");
             time += Time.deltaTime;
 
             if (time < time_max)
             {
                 sldProgreso.value = time;
-                Debug.Log("sldProgreso.value " + sldProgreso.value.ToString());
+                //Debug.Log("sldProgreso.value " + sldProgreso.value.ToString());
             }
 
             if (time >= time_max)
             {
                 //Estado = Estado_Seleccion.Seleccionado;
                 PlayerPrefs.SetString("Estado", "Seleccionado");
-                Debug.Log("time_max " + time.ToString());
+                //Debug.Log("time_max " + time.ToString());
             }
 
 

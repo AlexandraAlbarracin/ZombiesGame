@@ -11,3 +11,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Juego.unity
     guid: 8b7ab8a8b019a32459295502cb4ee997
+  - enabled: 1
+    path: Assets/MapaJugador2.unity
+    guid: baccb49ebd8da6743a5b782db072dafa
