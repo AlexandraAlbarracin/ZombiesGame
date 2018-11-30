@@ -13,7 +13,12 @@ public class HealthBar : MonoBehaviour {
 
     private void Start()
     {
-        health = maxHealth;
+        health = 50;
+    }
+
+    public void Update()
+    {
+        healthBarImage.fillAmount = (1 / maxHealth) * health;
     }
 
     [ContextMenu("Mas")]
@@ -30,7 +35,7 @@ public class HealthBar : MonoBehaviour {
             health = 0;
         }
 
-        UpdateHealthUI();
+        //UpdateHealthUI();
     }
 
     private void UpdateHealthUI()

@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using System.Data.SqlClient;
 
 public class AdminScript : MonoBehaviour
 {
@@ -668,49 +669,81 @@ public class AdminScript : MonoBehaviour
 
     public void btn_uVida1()
     {
-        cVida1 -= 1;
-        healthBar.AddHealth(5);
-        if (cVida1 < 1)
-        {
-            VidaAldea.enabled = false;
-            cVida1 = 0;
-        }
+        //cVida1 -= 1;
+        //healthBar.AddHealth(5);
+        ////ActualizarVida(5);
+        //if (cVida1 < 1)
+        //{
+        //    VidaAldea.enabled = false;
+        //    cVida1 = 0;
+        //}
         Debug.Log("uVida1");
     }
 
     public void btn_uVida2()
     {
-        cVida2 -= 1;
-        healthBar.AddHealth(10);
-        if (cVida2 < 1)
-        {
-            VidaAlmacen.enabled = false;
-            cVida2 = 0;
-        }
+        //cVida2 -= 1;
+        //healthBar.AddHealth(10);
+        //ActualizarVida(10);
+        //if (cVida2 < 1)
+        //{
+        //    VidaAlmacen.enabled = false;
+        //    cVida2 = 0;
+        //}
         Debug.Log("uVida2");
     }
 
     public void btn_uVida3()
     {
-        cVida3 -= 1;
-        healthBar.AddHealth(15);
-        if (cVida3 < 1)
-        {
-            VidaEstablo.enabled = false;
-            cVida3 = 0;
-        }
+        //cVida3 -= 1;
+        //healthBar.AddHealth(15);
+        ////ActualizarVida(15);
+        //if (cVida3 < 1)
+        //{
+        //    VidaEstablo.enabled = false;
+        //    cVida3 = 0;
+        //}
         Debug.Log("uVida3");
     }
 
     public void btn_uVida4()
     {
-        cVida4 -= 1;
-        healthBar.AddHealth(20);
-        if (cVida4 < 1)
-        {
-            VidaMansion.enabled = false;
-            cVida4 = 0;
-        }
+        //cVida4 -= 1;
+        //healthBar.AddHealth(20);
+        ////ActualizarVida(20);
+        //if (cVida4 < 1)
+        //{
+        //    VidaMansion.enabled = false;
+        //    cVida4 = 0;
+        //}
         Debug.Log("uVida1");
+    }
+    SqlConnection conn;
+    public void Conectar()
+    {
+        if (conn == null)
+            conn = new SqlConnection("Data Source=DBTests.mssql.somee.com;user id=Edward_1_SQLLogin_1;pwd=3iobta3f1h;Initial Catalog=DBTests;");
+        try
+        {
+            if (conn.State == System.Data.ConnectionState.Closed)
+                conn.Open(); //PlayerPrefs.set("Player Name", "Foobar");
+        }
+        catch (SqlException e)
+        {
+            Debug.Log("Error en conexion a servidor: " + e.Message);
+        }
+    }
+    public void ActualizarVida(int vida)
+    {
+        Conectar();
+        try
+        {
+            SqlCommand cmd = new SqlCommand("update Posicion set Vida += " + vida +" where ID = 1", conn);
+            cmd.ExecuteNonQuery();
+        }
+        catch (SqlException e)
+        {
+            Debug.Log("Error actualizando servidor: " + e.Message);
+        }
     }
 }
