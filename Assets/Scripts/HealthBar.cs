@@ -13,7 +13,7 @@ public class HealthBar : MonoBehaviour {
 
     private void Start()
     {
-        health = 50;
+        health = maxHealth;
     }
 
     public void Update()

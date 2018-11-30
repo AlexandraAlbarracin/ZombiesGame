@@ -45,10 +45,10 @@ public class AdminScript : MonoBehaviour
     public static bool Llave2;
     public static bool Llave3;
     public static bool Llave4;
-    public static int cVida1;
-    public static int cVida2;
-    public static int cVida3;
-    public static int cVida4;
+    public int cVida1;
+    public int cVida2;
+    public int cVida3;
+    public int cVida4;
 
     public Image ArmaAldea;
     public Image ArmaAlmacen;

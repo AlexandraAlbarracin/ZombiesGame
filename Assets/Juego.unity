@@ -18824,6 +18824,10 @@ MonoBehaviour:
   btnMujer: {fileID: 0}
   btnJugar: {fileID: 0}
   nivel: 0
+  cVida1: 0
+  cVida2: 0
+  cVida3: 0
+  cVida4: 0
   ArmaAldea: {fileID: 634993351}
   ArmaAlmacen: {fileID: 615816824}
   ArmaEstablo: {fileID: 299460021}
@@ -23607,7 +23611,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -60
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
       propertyPath: m_LocalRotation.x

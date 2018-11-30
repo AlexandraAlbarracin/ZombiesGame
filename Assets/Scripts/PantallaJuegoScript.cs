@@ -73,19 +73,21 @@ public class PantallaJuegoScript : MonoBehaviour {
         //"joystick 1 button 2" circulo
         //"joystick 1 button 3" triangulo
 
-        //if (Input.GetKeyDown("joystick 1 button 1"))
-        if(Input.GetKeyDown("p"))
+        if (Input.GetKeyDown("joystick 1 button 1"))
+        //if(Input.GetKeyDown("p"))
         {
             submenu = !submenu;
             canvassubmenu.SetActive(submenu);
             cambiar_inicio();
             var n = btnArmaMansion.GetComponent<Image>();
             n.color = Color.yellow;
+            actual = "ArmaMansion";
             //Debug.Log("boton x");
         }
 
         if (Input.GetKeyDown("r"))
         {
+            
             cambio_boton("r");
         }
 
@@ -103,8 +105,8 @@ public class PantallaJuegoScript : MonoBehaviour {
         {
             cambio_boton("u");
         }
-
-        if (Input.GetKeyDown("k"))
+        if (Input.GetKeyDown("joystick 1 button 3")) 
+        //if (Input.GetKeyDown("k"))
         {
             seleccionar_boton();
         }
@@ -638,72 +640,114 @@ public class PantallaJuegoScript : MonoBehaviour {
     {
         if (actual == "ArmaEstablo")
         {
-            adminScript.btn_uArma3();
+            if (ArmaEstablo.enabled == true)
+            {
+                
+            }
+            return;
         }
 
         if (actual == "ArmaMansion")
         {
-            adminScript.btn_uArma4();
+            if (ArmaMansion.enabled == true)
+            {
+                
+            }
+            return;
         }
 
         if (actual == "ArmaAlmacen")
         {
-            adminScript.btn_uArma2();
+            if (ArmaAlmacen.enabled == true)
+            {
+                
+            }
+            return;
         }
 
         if (actual == "ArmaAldea")
         {
-            adminScript.btn_uArma1();
+            if (ArmaAldea.enabled == true)
+            {
+                
+            }
+            return;
         }
 
         if (actual == "LlaveEstablo")
         {
-            adminScript.btn_uLlave3();
+            if (LlaveEstablo.enabled == true)
+            {
+                
+            }
+            return;
         }
 
         if (actual == "LlaveMansion")
         {
-            adminScript.btn_uLlave4();
+            if (LlaveMansion.enabled == true)
+            {
+                
+            }
+            return;
         }
 
         if (actual == "LlaveAlmacen")
         {
-            adminScript.btn_uLlave2();
+            if (LlaveAlmacen.enabled == true)
+            {
+                
+            }
+            return;
         }
 
         if (actual == "LlaveAldea")
         {
-            adminScript.btn_uLlave1();
+            if (LlaveAldea.enabled == true)
+            {
+                
+            }
+            return;
         }
 
         if (actual == "VidaEstablo")
         {
-            healthBar.AddHealth(15);
+            if(VidaEstablo.enabled == true)
+            {
+                healthBar.AddHealth(15);
+            }
             //adminScript.btn_uVida3();
+            return;
         }
 
         if (actual == "VidaMansion")
         {
-            healthBar.AddHealth(20);
+            if (VidaMansion.enabled == true)
+            {
+                healthBar.AddHealth(20);
+            }
             //adminScript.btn_uVida4();
+            return;
         }
 
         if (actual == "VidaAldea")
         {
-            healthBar.AddHealth(5);
+            if (VidaAldea.enabled == true)
+            {
+                healthBar.AddHealth(5);
+            }
             //adminScript.btn_uVida1();
+            return;
         }
 
         if (actual == "VidaAlmacen")
         {
-            healthBar.AddHealth(10);
+            if (VidaAlmacen.enabled == true)
+            {
+                healthBar.AddHealth(10);
+            }
             //adminScript.btn_uVida2();
-        }
-
-        if (actual == "LlaveEstablo")
-        {
-            var n = btnArmaEstablo.GetComponent<Image>();
-            n.color = Color.gray;
+            return;
         }
     }
 }
