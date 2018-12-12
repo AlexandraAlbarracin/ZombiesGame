@@ -25,6 +25,10 @@ public class PantallaJuegoScript : MonoBehaviour {
     public Image VidaAlmacen;
     public Image VidaEstablo;
     public Image VidaMansion;
+    public Image ArmaAldeaMano;
+    public Image ArmaAlmacenMano;
+    public Image ArmaEstabloMano;
+    public Image ArmaMansionMano;
 
     public GameObject btnArmaAldea;
     public GameObject btnArmaAlmacen;
@@ -38,11 +42,16 @@ public class PantallaJuegoScript : MonoBehaviour {
     public GameObject btnVidaAlmacen;
     public GameObject btnVidaEstablo;
     public GameObject btnVidaMansion;
-
+    public GameObject Establo;
+    public GameObject Aldea;
+    public GameObject Almacen;
+    public GameObject Mansion;
 
     public HealthBar healthBar;
 
     public string actual;
+    public string armaActual;
+    public string elegido;
     // Use this for initialization
     void Start ()
     {
@@ -61,8 +70,17 @@ public class PantallaJuegoScript : MonoBehaviour {
         VidaEstablo.enabled = false;
         VidaMansion.enabled = false;
         actual = "ArmaMansion";
+        armaActual = "";
         var m = btnArmaMansion.GetComponent<Image>();
         m.color = Color.yellow;
+        Mansion.SetActive(false);
+        Aldea.SetActive(false);
+        Almacen.SetActive(false);
+        Establo.SetActive(false);
+        ArmaAldeaMano.enabled = false;
+        ArmaAlmacenMano.enabled = false;
+        ArmaEstabloMano.enabled = false;
+        ArmaMansionMano.enabled = false;
     }
     public bool submenu;
 	// Update is called once per frame
@@ -73,7 +91,7 @@ public class PantallaJuegoScript : MonoBehaviour {
         //"joystick 1 button 2" circulo
         //"joystick 1 button 3" triangulo
 
-        if (Input.GetKeyDown("joystick 1 button 1"))
+        if (Input.GetKeyDown("joystick 1 button 6"))
         //if(Input.GetKeyDown("p"))
         {
             submenu = !submenu;
@@ -85,33 +103,40 @@ public class PantallaJuegoScript : MonoBehaviour {
             //Debug.Log("boton x");
         }
 
-        if (Input.GetKeyDown("r"))
+        if (Input.GetKeyDown("joystick 1 button 2"))
         {
             
             cambio_boton("r");
         }
 
-        if (Input.GetKeyDown("o"))
+        if (Input.GetKeyDown("joystick 1 button 1"))
         {
             cambio_boton("o");
         }
 
-        if (Input.GetKeyDown("l"))
+        if (Input.GetKeyDown("joystick 1 button 0"))
         {
             cambio_boton("l");
         }
 
-        if (Input.GetKeyDown("u"))
+        if (Input.GetKeyDown("joystick 1 button 3"))
         {
             cambio_boton("u");
         }
-        if (Input.GetKeyDown("joystick 1 button 3")) 
+
+        if (Input.GetKeyDown("joystick 1 button 7")) 
         //if (Input.GetKeyDown("k"))
         {
             seleccionar_boton();
         }
-
+        
+        if(Input.GetKeyDown("joystick 1 button 4"))
+        {
+            desactivar_arma();
+            armaActual = "";
+        }
     }
+
     public void ActualizarArma(int n)
     {
         Image img = imgArma.GetComponent<Image>();
@@ -434,6 +459,33 @@ public class PantallaJuegoScript : MonoBehaviour {
         }
     }
 
+    public void desactivar_arma()
+    {
+        if(armaActual == "ArmaAldea")
+        {
+            ArmaAldeaMano.enabled = false;
+            return;
+        }
+
+        if (armaActual == "ArmaAlmacen")
+        {
+            ArmaAlmacenMano.enabled = false;
+            return;
+        }
+
+        if (armaActual == "ArmaEstablo")
+        {
+            ArmaEstabloMano.enabled = false;
+            return;
+        }
+
+        if (armaActual == "ArmaMansion")
+        {
+            ArmaMansionMano.enabled = false;
+            return;
+        }
+    }
+
     public void movimiento_VidaAlmacen(string m)
     {
         if (m == "l")
@@ -642,7 +694,9 @@ public class PantallaJuegoScript : MonoBehaviour {
         {
             if (ArmaEstablo.enabled == true)
             {
-                
+                desactivar_arma();
+                ArmaEstabloMano.enabled = true;
+                armaActual = "ArmaEstablo";
             }
             return;
         }
@@ -651,7 +705,9 @@ public class PantallaJuegoScript : MonoBehaviour {
         {
             if (ArmaMansion.enabled == true)
             {
-                
+                desactivar_arma();
+                ArmaMansionMano.enabled = true;
+                armaActual = "ArmaMansion";
             }
             return;
         }
@@ -660,7 +716,9 @@ public class PantallaJuegoScript : MonoBehaviour {
         {
             if (ArmaAlmacen.enabled == true)
             {
-                
+                desactivar_arma();
+                ArmaAlmacenMano.enabled = true;
+                armaActual = "ArmaAlmacen";
             }
             return;
         }
@@ -669,7 +727,9 @@ public class PantallaJuegoScript : MonoBehaviour {
         {
             if (ArmaAldea.enabled == true)
             {
-                
+                desactivar_arma();
+                ArmaAldeaMano.enabled = true;
+                armaActual = "ArmaAldea";
             }
             return;
         }
@@ -678,7 +738,7 @@ public class PantallaJuegoScript : MonoBehaviour {
         {
             if (LlaveEstablo.enabled == true)
             {
-                
+                Establo.SetActive(true);
             }
             return;
         }
@@ -687,7 +747,7 @@ public class PantallaJuegoScript : MonoBehaviour {
         {
             if (LlaveMansion.enabled == true)
             {
-                
+                Mansion.SetActive(true);
             }
             return;
         }
@@ -696,7 +756,7 @@ public class PantallaJuegoScript : MonoBehaviour {
         {
             if (LlaveAlmacen.enabled == true)
             {
-                
+                Almacen.SetActive(true);
             }
             return;
         }
@@ -705,7 +765,7 @@ public class PantallaJuegoScript : MonoBehaviour {
         {
             if (LlaveAldea.enabled == true)
             {
-                
+                Aldea.SetActive(true);
             }
             return;
         }
@@ -716,7 +776,6 @@ public class PantallaJuegoScript : MonoBehaviour {
             {
                 healthBar.AddHealth(15);
             }
-            //adminScript.btn_uVida3();
             return;
         }
 
@@ -726,7 +785,6 @@ public class PantallaJuegoScript : MonoBehaviour {
             {
                 healthBar.AddHealth(20);
             }
-            //adminScript.btn_uVida4();
             return;
         }
 
@@ -736,7 +794,6 @@ public class PantallaJuegoScript : MonoBehaviour {
             {
                 healthBar.AddHealth(5);
             }
-            //adminScript.btn_uVida1();
             return;
         }
 
@@ -746,7 +803,6 @@ public class PantallaJuegoScript : MonoBehaviour {
             {
                 healthBar.AddHealth(10);
             }
-            //adminScript.btn_uVida2();
             return;
         }
     }

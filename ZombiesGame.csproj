@@ -138,6 +138,7 @@
     <Compile Include="Assets\Oculus\VR\Scripts\Util\OVRWaitCursor.cs" />
     <Compile Include="Assets\Scripts\AdminJugador2.cs" />
     <Compile Include="Assets\Scripts\AdminScript.cs" />
+    <Compile Include="Assets\Scripts\CasaSeleccionada.cs" />
     <Compile Include="Assets\Scripts\Character.cs" />
     <Compile Include="Assets\Scripts\ControladorJuego.cs" />
     <Compile Include="Assets\Scripts\FPS_Script.cs" />
@@ -148,6 +149,7 @@
     <Compile Include="Assets\Scripts\MostrarTerrenoScript.cs" />
     <Compile Include="Assets\Scripts\MRWindowController.cs" />
     <Compile Include="Assets\Scripts\PantallaJuegoScript.cs" />
+    <Compile Include="Assets\Scripts\PathMover.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\PlayerFPScript.cs" />
     <Compile Include="Assets\Scripts\PointerSelectionController.cs" />

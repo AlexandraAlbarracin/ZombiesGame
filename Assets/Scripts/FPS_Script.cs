@@ -95,7 +95,7 @@ public class FPS_Script : MonoBehaviour
 
             if (pos.zombie)
             {
-                //zombie1.SetActive(false);
+                zombie1.SetActive(false);
                 //zombie1.transform.position = new Vector3(0, -19, 60);
                 //zombie1.transform.position = new Vector3(19, -27.38f, -104);
                 //System.Random rnd = new System.Random();

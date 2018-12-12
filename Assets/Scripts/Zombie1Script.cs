@@ -87,7 +87,7 @@ public class Zombie1Script : MonoBehaviour {
         {
             danio += 3;
             healthBar.AddHealth(-3);
-            Debug.Log("Jugador herido ................" + danio);
+       //     Debug.Log("Jugador herido ................" + danio);
         }
         if (danio > 10)
             ActualizarPosicionServidor();

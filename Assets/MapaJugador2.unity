@@ -340,6 +340,7 @@ GameObject:
   m_Component:
   - component: {fileID: 34990244}
   - component: {fileID: 34990245}
+  - component: {fileID: 34990246}
   m_Layer: 0
   m_Name: Graveyard
   m_TagString: Untagged
@@ -396,6 +397,26 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
+--- !u!114 &34990246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 34990243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e5e7efcd0942bc4fb921cbc3ada675f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  elegido: 
+  btnAldea: {fileID: 1746935734}
+  btnAlmacen: {fileID: 0}
+  btnCasaAldea: {fileID: 1464397160}
+  btnCasaLago: {fileID: 1805717957}
+  btnCementerio: {fileID: 721024263}
+  btnEstablo: {fileID: 0}
+  btnLago: {fileID: 1684058354}
+  btnMansion: {fileID: 0}
 --- !u!1001 &35807218
 Prefab:
   m_ObjectHideFlags: 0

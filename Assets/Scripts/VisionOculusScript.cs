@@ -1256,6 +1256,40 @@ public class VisionOculusScript : MonoBehaviour
                     PlayerPrefs.SetString("Estado", "NoSeleccionado");
                 }
             }
+/*Zombie*/
+            if (hit.transform.gameObject.tag == "btnZombie")
+            {
+                Debug.Log("btnZombie");
+                if (hit.transform.gameObject.tag != tag_actual)
+                {
+                    Variables.Estado = Estado_Seleccion.NoSeleccionado.ToString(); PlayerPrefs.SetString("Estado", "NoSeleccionado");
+                    Variables.btn = -1; PlayerPrefs.SetString("btn", "-1");
+
+                    PlayerPrefs.SetString("Estado", "NoSeleccionado");
+                }
+                 
+                if (est == Estado_Seleccion.NoSeleccionado.ToString())
+                {
+                    lbScript.time = 0;
+                    Variables.Estado = Estado_Seleccion.Seleccionando.ToString(); PlayerPrefs.SetString("Estado", "Seleccionando");
+                    tag_actual = "btnZombie";
+                    Debug.Log("Seleccionando btnZombie");
+
+                    PlayerPrefs.SetString("Estado", "Seleccionando");
+                }
+
+                Debug.Log(Variables.btn.ToString());
+
+                if (est == Estado_Seleccion.Seleccionado.ToString())
+                {
+                    PlayerPrefs.SetString("btn", "36");
+                    Variables.btn = 36;
+                    Variables.Estado = Estado_Seleccion.NoSeleccionado.ToString(); PlayerPrefs.SetString("Estado", "NoSeleccionado");
+                    Debug.Log(Variables.btn.ToString());
+
+                    PlayerPrefs.SetString("Estado", "NoSeleccionado");
+                }
+            }
             else
             {
                 //Debug.Log("No button");
